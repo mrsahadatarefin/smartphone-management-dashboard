@@ -11,7 +11,7 @@ app.use(express.json());
 
 //routes
 
-// app.use('/api', router);
+app.use('/api', router);
 
 app.get('/', (req: Request, res: Response) => {
   res.send(' Smartphone Management Dashboard server');
