@@ -34,8 +34,8 @@ const loginUserIntoDB = async (payload: TLoginUser) => {
   if (!isPasswordCorrect) {
     throw new Error('password is not correct !');
   }
-  const { _id, email, role } = user;
-  const JwtPayload = { userId: _id, email, role };
+  const { _id, email, role, username } = user;
+  const JwtPayload = { userId: _id, username, email, role };
   const accessToken = createToken(
     JwtPayload,
     config.jwt_access_secret as string,
