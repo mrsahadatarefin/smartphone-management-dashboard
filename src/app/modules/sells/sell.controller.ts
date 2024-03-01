@@ -14,6 +14,18 @@ const createSell = catchAsync(async (req: Request, res: Response) => {
     data: result,
   });
 });
+const getAllSell = catchAsync(async (req: Request, res: Response) => {
+  const query = req.query;
+  const result = await SellService.allSellFindFromDb(query);
+  sendResponse(res, {
+    statusCode: 200,
+    success: true,
+    message: 'sell data retrieved successfully',
+    meta: result.meta,
+    data: result.data,
+  });
+});
 export const sellController = {
   createSell,
+  getAllSell,
 };

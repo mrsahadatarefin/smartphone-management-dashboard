@@ -4,5 +4,10 @@ export type TSell = {
   quantity: number;
   name: string;
   buyer: Types.ObjectId;
-  Date: string;
+  date: string;
+};
+export type sellQueryParams = {
+  page?: number;
+  limit?: number;
+  Date?: string;
 };

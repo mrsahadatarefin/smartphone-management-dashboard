@@ -12,7 +12,7 @@ const sellSchema = new Schema<TSell>(
       type: Number,
       required: true,
     },
-    Date: {
+    date: {
       type: String,
       required: true,
     },

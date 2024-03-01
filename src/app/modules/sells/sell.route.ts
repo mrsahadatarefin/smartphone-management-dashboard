@@ -12,4 +12,5 @@ route.post(
   validateRequest(sellValidationSchema),
   sellController.createSell,
 );
+route.get('/', auth(User_Role.user), sellController.getAllSell);
 export const sellRoute = route;
